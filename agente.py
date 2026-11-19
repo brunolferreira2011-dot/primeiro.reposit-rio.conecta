@@ -9,7 +9,8 @@ from datetime import date
 # a chave vem do segredo; se ele não existir, o programa pede a chave
 CHAVE = (os.environ.get("AI_GATEWAY_API_KEY")
          or getpass.getpass("Cole sua chave e tecle Enter (ela não aparece na tela): ")).strip()
-URL = "https://api.cloudflare.com/client/v4/accounts/b59a4707e422839abaca2e64e624bdb8/ai/v1/chat/completions"MODELO = "@cf/mistralai/mistral-small-3.1-24b-instruct"
+URL = "https://api.cloudflare.com/client/v4/accounts/b59a4707e422839abaca2e64e624bdb8/ai/v1/chat/completions"
+MODELO = "@cf/mistralai/mistral-small-3.1-24b-instruct"
 
 ERROS = {
     401: "Chave inválida ou expirada. Confira o segredo AI_GATEWAY_API_KEY.",
